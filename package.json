@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "npm run build && vite preview",
-    "deploy": "npm run build && npx wrangler pages deploy ./dist --project-name=portfolio"
+    "deploy": "npm run build && npx wrangler pages deploy"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
