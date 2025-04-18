@@ -1,5 +1,8 @@
 {
     "name": "portfolio",
     "compatibility_date": "2025-04-19",
-    "main": "./src/main.tsx"
+    "main": "./src/main.tsx",
+    "assets": {
+        "directory": "./src/assets"
+      }
 }
