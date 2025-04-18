@@ -1,9 +1,5 @@
 {
     "name": "portfolio",
     "compatibility_date": "2025-04-19",
-    "main": "./src/main.tsx",
-    "assets": {
-        "directory": "./src/assets"
-      },
     "pages_build_output_dir": "./dist"
 }
