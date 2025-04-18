@@ -1,0 +1,5 @@
+{
+    "name": "my-react-app",
+    "compatibility_date": "2025-04-19",
+    "main": "./src/main.tsx"
+  }
