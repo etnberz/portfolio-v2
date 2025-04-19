@@ -57,7 +57,7 @@ export default function About() {
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Hello! I'm Nazmul Hossain, a passionate JavaScript developer
+                Hello! I'm Maxime Caïtucoli, a passionate JavaScript developer
                 specializing in creating innovative web solutions and
                 user-friendly interfaces.{" "}
                 <span
@@ -104,7 +104,7 @@ export default function About() {
                         theme === "dark" ? "text-white" : "text-gray-900"
                       }`}
                     >
-                      Nazmul Hossain, Creator of 
+                      Maxime Caïtucoli, Creator of 
                     </cite>
                     <div className="flex items-center gap-2">
                       <img

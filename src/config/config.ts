@@ -1,6 +1,6 @@
 const config = {
   information: {
-    name: "Nazmul Hossain",
+    name: "Maxime Caïtucoli",
     helloText: "Hello",
     welcomeText: "✨ Welcome to my universe",
     title: "JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks",
@@ -9,7 +9,7 @@ const config = {
   flipWords: ["Linux & GitHub for DevOps", "Cloud Computing", "Crafting frameworks", "Frontend Web Developer"],
   codeContent: {
     code: `const profile = {
-  name: 'Nazmul Hossain',
+  name: 'Maxime Caïtucoli',
   title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
   skills: [
     'React', 'NextJS', 'Redux', 'Express',
