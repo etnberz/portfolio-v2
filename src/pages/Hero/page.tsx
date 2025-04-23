@@ -59,7 +59,7 @@ export default function Hero() {
                             : "text-black hover:text-neutral-600")
                         }
                       >
-                        <span>{config.information.welcomeText}</span>
+                        <span><a href="#about">{config.information.welcomeText}</a></span>
                         <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                       </AnimatedShinyText>
                     </div>
@@ -97,20 +97,25 @@ export default function Hero() {
               </div>
 
               <p className="mt-6 text-2xl">{config.information.title}</p>
+              <p className="mt-6 text-xl">{config.information.title3}</p>
 
               <div className="mt-8 flex space-x-4">
-                <a
-                  href="#"
-                  className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
-                >
-                  <Button className="cursor-pointer">Learn More</Button>
-                </a>
-                <a
-                  href="#"
-                  className="bg-transparent border border-gray-700 text-gray-400 hover:border-gray-600 hover:text-gray-300 py-2 px-6 transition duration-300 flex items-center justify-center rounded-full cursor-pointer"
-                >
-                  Get Resume
-                </a>
+                <div className="z-10 flex items-center justify-center">
+                  <a
+                    href="#about"
+                    className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
+                  >
+                     <Button className="cursor-pointer">Learn More</Button>
+                  </a>
+                </div>
+                <div className="z-10 flex items-center justify-center">
+                  <a
+                    href="/cv.pdf"
+                    className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
+                  >
+                     <Button className="cursor-pointer">Get Resume</Button>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -124,7 +129,7 @@ export default function Hero() {
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="ml-4 text-sm text-gray-400">developer.js</div>
+                  <div className="ml-4 text-sm text-gray-400">profile.py</div>
                 </div>
 
                 {/* Code Content */}
@@ -132,7 +137,7 @@ export default function Hero() {
                   <div className="relative z-20 ">
                     <BackgroundBeamsWithCollision>
                       <SyntaxHighlighter
-                        language="javascript"
+                        language="python"
                         style={dracula}
                         customStyle={{
                           margin: 0,

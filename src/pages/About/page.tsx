@@ -1,6 +1,5 @@
 import HeroImg from "../../assets/hero.jpg";
 import { useTheme } from "../../provider/page";
-import OlovaLogo from "../../assets/olova.png";
 
 export default function About() {
   const { theme } = useTheme();
@@ -15,13 +14,13 @@ export default function About() {
             : "bg-white text-gray-900"
         }`}
       >
-        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
+        <div id="about_me" className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2
             className={`relative z-10 max-w-xl text-4xl font-medium lg:text-5xl ${
               theme === "dark" ? "text-white" : "text-gray-900"
             }`}
           >
-            Developer, Designer, Creator, Innovator
+            Let's build AI Together!
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
@@ -51,74 +50,45 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative space-y-4">
+            <div className="relative space-y-4 justify-evenly">
               <p
                 className={`${
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                Hello! I'm Maxime Caïtucoli, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
                 <span
                   className={`font-bold ${
                     theme === "dark" ? "text-white" : "text-gray-900"
                   }`}
                 >
-                  As the creator of the OlovaJS UI Framework
+                ML Engineer since 2019
                 </span>
-                , I'm dedicated to simplifying development workflows.
+                , I will support you in your Data/AI projects: from data extraction to the deployment
+                of predictive models (ML/LLM) in production, let's build AI processes that fits your organization's needs!
+                I have a strong expertise of Python and its associated ML libraries, as well as a deep understanding of the challenges
+                related to the model lifecycle.{" "}
               </p>
               <p
                 className={`${
                   theme === "dark" ? "text-gray-300" : "text-gray-600"
                 }`}
               >
-                My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                With a focus on code quality, I manage my projects using an MLOps approach: Unit Testing,
+                Dependency Management (Poetry), CI/CD, Git Versioning, Docker Containers, Experiment Tracking,
+                Feature Store, Model Registry (MLflow, Snowflake), Monitoring, and Cloud Deployment (AWS, GCP...).
+                Specialized in the fields of renewable energy and the environment, I have worked extensively with
+                large industrial groups in France and internationally.
               </p>
-
-              <div className="pt-6">
-                <blockquote
-                  className={`border-l-4 ${
-                    theme === "dark" ? "border-gray-700" : "border-gray-300"
-                  } pl-4`}
-                >
-                  <p
-                    className={
-                      theme === "dark" ? "text-gray-300" : "text-gray-600"
-                    }
-                  >
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
-                  </p>
-
-                  <div className="mt-6 space-y-3">
-                    <cite
-                      className={`block font-medium ${
-                        theme === "dark" ? "text-white" : "text-gray-900"
-                      }`}
-                    >
-                      Maxime Caïtucoli, Creator of 
-                    </cite>
-                    <div className="flex items-center gap-2">
-                      <img
-                        className={`h-5 w-fit ${theme === "dark" ? "" : ""}`}
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span>OlovaJS</span>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
+              <p
+                className={`${
+                  theme === "dark" ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                Naturally curious, I am passionate about 
+                knowledge sharing, the exchange of ideas, and teaching MLOps concepts. Transferring expertise 
+                and training teams are an integral part of my approach: I enjoy creating an environment 
+                where everyone can learn, grow, and thrive.
+              </p>
             </div>
           </div>
         </div>
