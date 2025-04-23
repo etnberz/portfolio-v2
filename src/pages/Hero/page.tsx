@@ -97,7 +97,6 @@ export default function Hero() {
               </div>
 
               <p className="mt-6 text-2xl">{config.information.title}</p>
-              <p className="mt-6 text-xl">{config.information.title3}</p>
 
               <div className="mt-8 flex space-x-4">
                 <div className="z-10 flex items-center justify-center">

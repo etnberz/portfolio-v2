@@ -76,8 +76,6 @@ export default function About() {
                 With a focus on code quality, I manage my projects using an MLOps approach: Unit Testing,
                 Dependency Management (Poetry), CI/CD, Git Versioning, Docker Containers, Experiment Tracking,
                 Feature Store, Model Registry (MLflow, Snowflake), Monitoring, and Cloud Deployment (AWS, GCP...).
-                Specialized in the fields of renewable energy and the environment, I have worked extensively with
-                large industrial groups in France and internationally.
               </p>
               <p
                 className={`${
