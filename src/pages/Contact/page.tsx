@@ -152,7 +152,7 @@ export default function Contact() {
                         isDarkMode ? "text-gray-400" : "text-gray-600"
                       }`}
                     >
-                      olovajs@gmail.com
+                      maxime.caitucoli@live.fr
                     </p>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function Contact() {
                         isDarkMode ? "text-gray-400" : "text-gray-600"
                       }`}
                     >
-                      Laxmipure, Natore 6400
+                      Bordeaux, France
                     </p>
                   </div>
                 </div>
