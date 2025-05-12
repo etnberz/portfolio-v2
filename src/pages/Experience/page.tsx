@@ -18,48 +18,70 @@ export default function ProfessionalJourney() {
       company: "Believe",
       mascot: "📘",
       year: "Sept 2023 - Today",
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      skills: ["Python", "Amazon Web Services", "Machine Learning Operations (MLOps)", "Snowflake", "MLflow", "GitLab"],
       image: believe,
+      intro: "Initially hired as a Data Scientist, I soon offered to rethink the team's processes and tools. I set up a ML/LLMOps strategy for the team, enabling us to build, train, deploy, monitor and industrialize our ML models in a scalable and secure way.",
       description:
-      ["Implementation of documented, secure and scalable MLOps processes within the DS team",
-        "Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
-      "Developed a library and cookiecutter to industrialize the creation and deployment of ML models."],
+      ["- Implementation of documented, secure and scalable MLOps and LLMOps processes within the DS team",
+      "- Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
+      "- Developed a library and cookiecutter to industrialize the creation and deployment of ML and LLM models.",
+      "- Refactoring and migration of Legacy models to the new MLOps paradigm.",
+      "- Drafting and disseminating good code practices, training teams.",
+      "- Development of a Data application in Streamlit in Snowflake.",
+      "- Development of the associated prediction module deployed on AWS Lambda.",
+    ]
     },
     {
       title: "Data Scientist Freelance",
       company: "Rosa",
       mascot: "📗",
-      year: "2021-2023",
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      year: "Sept 2022 - Jan 2023",
+      skills: ["Heroku", "Plotly", "Xarray", "GitHub", "Docker"],
       image: rosa,
+      intro: "A friend asked me to create a technical PoC to sell his project to investors. He's setting up a company to measure the environmental impact of mining sites using satellite images from the Sentinel mission (European Space Agency).",
       description:
-        ["Implementation of documented, secure and scalable MLOps processes within the DS team",
-          "Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
-        "Developed a library and cookiecutter to industrialize the creation and deployment of ML models."],
+        ["- Analysis and interpretation of satellite data (ESA Sentinel mission).",
+        "- Creation of satellite image features and visuals with Xarray. ",
+        "- Development of an internal library for extracting and processing satellite images. ",
+        "- Development of a web app with Plotly Dash deployed on Heroku."],
     },
     {
       title: "Data Scientist",
       company: "Metron",
       mascot: "📗",
-      year: "2021-2023",
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      year: "Jan 2020 - May 2022",
+      skills: [ "Amazon Web Services", "Data Science", " Gitlab CI/CD", "Python", "Machine Learning"],
       image: metron,
+      intro:"In a Data Science team of seven people to optimize the energy consumption of industrial customers in France and abroad. In parallel, development of our own Data tools for data analysis, construction and deployment of ML models and their monitoring.",
       description:
-        ["Implementation of documented, secure and scalable MLOps processes within the DS team",
-          "Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
-        "Developed a library and cookiecutter to industrialize the creation and deployment of ML models."],
+        ["- Building and deploying Machine Learning models with Docker on AWS.",
+        "- Analysis and interpretation of energy data from various industrial sectors worldwide.",
+        "- Development of energy consumption optimization algorithms.",
+        "- Development of documented and tested Python libraries.",
+        "- Project management in DevOps mode.",
+        "- Created a Python CLI service for automatic calculation testing.", 
+        "- Developed an aggregation calculation engine based on Pandas.",
+        "- Wrote unit and functional tests, set up CI/CD.",
+        "- Model monitoring with Prometheus and Grafana.",
+        "- Created an automatic data generation tool.",
+        "- Created a data anomaly detection tool.",
+        "- Created and led a Python community of practice."],
     },
     {
       title: "Data Scientist",
       company: "Beebryte",
       mascot: "📗",
-      year: "2021-2023",
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      year: "Mar 2019 - Sept 2019",
+      skills: ["Python", "Data Science", "Machine Learning", "GitHub"],
       image: beebryte,
+      intro: "To complete my data and energy studies, I did this internship in Singapore with a startup offering to reduce the energy consumption of its customers' HVAC systems using data and AI solutions.",
       description:
-        ["Implementation of documented, secure and scalable MLOps processes within the DS team",
-          "Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
-        "Developed a library and cookiecutter to industrialize the creation and deployment of ML models."],
+        ["- Study of air-conditioning systems in professional buildings.",
+        "- Analysis and interpretation of energy data.",
+        "- Building artificial intelligence models.",
+        "- Exploiting energy-saving opportunities through intelligent system control.",
+        "- Structuring and documenting projects at IT level.",
+        "- Creation of information materials for our customers."],
     },
   ];
 
@@ -156,10 +178,18 @@ export default function ProfessionalJourney() {
                   </p>
                 </div>
 
+                <p
+                  className={`text-md bold border-l-2 border-teal-500 pl-3 ${
+                    isDark ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  {edu.intro}
+                </p>
+
                 <div className="flex flex-wrap gap-2">
                   {edu.description.map((desc) => (
                     <li
-                      className={`${
+                      className={`block ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
                     >
