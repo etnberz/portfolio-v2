@@ -3,7 +3,7 @@ const config = {
     name: "Maxime Caïtucoli",
     helloText: "Hello",
     welcomeText: "✨ Welcome to my universe",
-    title: "ML Engineer 🚀 | AWS Certified MLA 🧑‍🎓 | AI System Builder 🔧",
+    title: "ML Ops Engineer 🚀 | AWS Certified MLA 🧑‍🎓 | AI System Builder 🔧",
     title3: "And coding the future 💻 ✨",
   },
   flipWords: ["MLOps for AI Systems", "AWS Certified MLA", "Crafting LLM Apps", "Data Enthusiast"],

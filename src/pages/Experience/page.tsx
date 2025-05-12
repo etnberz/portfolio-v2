@@ -1,4 +1,4 @@
-import { Briefcase, Calendar} from "lucide-react";
+import { Briefcase, Calendar, Building2} from "lucide-react";
 import { useTheme } from "../../provider/page";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -16,72 +16,68 @@ export default function ProfessionalJourney() {
     {
       title: "ML Ops Engineer",
       company: "Believe",
-      mascot: "📘",
       year: "Sept 2023 - Today",
       skills: ["Python", "Amazon Web Services", "Machine Learning Operations (MLOps)", "Snowflake", "MLflow", "GitLab"],
       image: believe,
       intro: "Initially hired as a Data Scientist, I soon offered to rethink the team's processes and tools. I set up a ML/LLMOps strategy for the team, enabling us to build, train, deploy, monitor and industrialize our ML models in a scalable and secure way.",
       description:
-      ["- Implementation of documented, secure and scalable MLOps and LLMOps processes within the DS team",
-      "- Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
-      "- Developed a library and cookiecutter to industrialize the creation and deployment of ML and LLM models.",
-      "- Refactoring and migration of Legacy models to the new MLOps paradigm.",
-      "- Drafting and disseminating good code practices, training teams.",
-      "- Development of a Data application in Streamlit in Snowflake.",
-      "- Development of the associated prediction module deployed on AWS Lambda.",
+      ["Implementation of documented, secure and scalable MLOps and LLMOps processes within the DS team",
+      "Creation of an MLflow server deployed on AWS for Experiment Tracking and Model Registry",
+      "Developed a library and cookiecutter to industrialize the creation and deployment of ML/LLM models",
+      "Refactoring and migration of Legacy models to the new MLOps paradigm",
+      "Drafting and disseminating good code practices, training teams",
+      "Development of a Data application in Streamlit in Snowflake",
+      "Development of the associated prediction module deployed on AWS Lambda",
     ]
     },
     {
       title: "Data Scientist Freelance",
       company: "Rosa",
-      mascot: "📗",
       year: "Sept 2022 - Jan 2023",
       skills: ["Heroku", "Plotly", "Xarray", "GitHub", "Docker"],
       image: rosa,
       intro: "A friend asked me to create a technical PoC to sell his project to investors. He's setting up a company to measure the environmental impact of mining sites using satellite images from the Sentinel mission (European Space Agency).",
       description:
-        ["- Analysis and interpretation of satellite data (ESA Sentinel mission).",
-        "- Creation of satellite image features and visuals with Xarray. ",
-        "- Development of an internal library for extracting and processing satellite images. ",
-        "- Development of a web app with Plotly Dash deployed on Heroku."],
+        ["Analysis and interpretation of satellite data (ESA Sentinel mission)",
+        "Creation of satellite image features and visuals with Xarray",
+        "Development of an internal library for extracting and processing satellite images",
+        "Development of a web app with Plotly Dash deployed on Heroku"],
     },
     {
       title: "Data Scientist",
       company: "Metron",
-      mascot: "📗",
       year: "Jan 2020 - May 2022",
       skills: [ "Amazon Web Services", "Data Science", " Gitlab CI/CD", "Python", "Machine Learning"],
       image: metron,
       intro:"In a Data Science team of seven people to optimize the energy consumption of industrial customers in France and abroad. In parallel, development of our own Data tools for data analysis, construction and deployment of ML models and their monitoring.",
       description:
-        ["- Building and deploying Machine Learning models with Docker on AWS.",
-        "- Analysis and interpretation of energy data from various industrial sectors worldwide.",
-        "- Development of energy consumption optimization algorithms.",
-        "- Development of documented and tested Python libraries.",
-        "- Project management in DevOps mode.",
-        "- Created a Python CLI service for automatic calculation testing.", 
-        "- Developed an aggregation calculation engine based on Pandas.",
-        "- Wrote unit and functional tests, set up CI/CD.",
-        "- Model monitoring with Prometheus and Grafana.",
-        "- Created an automatic data generation tool.",
-        "- Created a data anomaly detection tool.",
-        "- Created and led a Python community of practice."],
+        ["Building and deploying Machine Learning models with Docker on AWS.",
+        "Analysis and interpretation of energy data from various industrial sectors worldwide",
+        "Development of energy consumption optimization algorithms",
+        "Development of documented and tested Python libraries",
+        "Project management in DevOps mode",
+        "Created a Python CLI service for automatic calculation testing", 
+        "Developed an aggregation calculation engine based on Pandas",
+        "Wrote unit and functional tests, set up CI/CD",
+        "Model monitoring with Prometheus and Grafana",
+        "Created an automatic data generation tool",
+        "Created a data anomaly detection tool",
+        "Created and led a Python community of practice"],
     },
     {
       title: "Data Scientist",
       company: "Beebryte",
-      mascot: "📗",
       year: "Mar 2019 - Sept 2019",
       skills: ["Python", "Data Science", "Machine Learning", "GitHub"],
       image: beebryte,
       intro: "To complete my data and energy studies, I did this internship in Singapore with a startup offering to reduce the energy consumption of its customers' HVAC systems using data and AI solutions.",
       description:
-        ["- Study of air-conditioning systems in professional buildings.",
-        "- Analysis and interpretation of energy data.",
-        "- Building artificial intelligence models.",
-        "- Exploiting energy-saving opportunities through intelligent system control.",
-        "- Structuring and documenting projects at IT level.",
-        "- Creation of information materials for our customers."],
+        ["Study of air-conditioning systems in professional buildings",
+        "Analysis and interpretation of energy data",
+        "Building artificial intelligence models",
+        "Exploiting energy-saving opportunities through intelligent system control",
+        "Structuring and documenting projects at IT level",
+        "Creation of information materials for our customers"],
     },
   ];
 
@@ -151,7 +147,7 @@ export default function ProfessionalJourney() {
               <div className="md:w-2/3 space-y-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-3xl">{edu.mascot}</span>
+                    <span className="text-3xl"><Briefcase className="w-7 h-7 text-teal-500" /></span>
                     <h3
                       className={`text-2xl font-bold ${
                         isDark ? "text-white" : "text-gray-900"
@@ -165,7 +161,7 @@ export default function ProfessionalJourney() {
                       isDark ? "text-gray-300" : "text-gray-700"
                     }`}
                   >
-                    <Briefcase className="w-5 h-5 text-teal-500" />
+                    <Building2 className="w-5 h-5 text-purple-400" />
                     {edu.company}
                   </p>
                   <p
@@ -180,17 +176,17 @@ export default function ProfessionalJourney() {
 
                 <p
                   className={`text-md bold border-l-2 border-teal-500 pl-3 ${
-                    isDark ? "text-gray-300" : "text-gray-700"
+                    isDark ? "text-gray-100" : "text-gray-700"
                   }`}
                 >
                   {edu.intro}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="block block-col gap-2">
                   {edu.description.map((desc) => (
                     <li
-                      className={`block ${
-                        isDark ? "text-gray-400" : "text-gray-600"
+                      className={`${
+                        isDark ? "text-gray-200" : "text-gray-600"
                       }`}
                     >
                       {desc}
@@ -202,7 +198,7 @@ export default function ProfessionalJourney() {
                   {edu.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
+                      className="px-2 py-1 text-md rounded bg-blue-500/10 text-blue-300"
                     >
                       {skill}
                     </span>
