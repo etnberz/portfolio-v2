@@ -18,15 +18,12 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/education" element={<Education />} />
-          <Route
-            path="*"
-            element={
-              <>
-                <Hero />
-                <About />
-              </>
-            }
-          />
+          <Route path="/" element={
+  <>
+    <Hero />
+    <About />
+  </>
+} />
         </Routes>
       </div>
     </>

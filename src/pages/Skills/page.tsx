@@ -3,39 +3,53 @@ import { Badge } from "@/components/ui/badge";
 import { useTheme } from "@/provider/page";
 import { Marquee } from "@/components/magicui/marquee";
 import {
-  Code2,
+  BrainCircuit,
   Paintbrush,
   Database,
-  Layout,
   Cpu,
   Cloud,
   Sparkles,
-  Layers,
   GitBranch,
   Server,
-  Globe,
-  FileCode,
-  Figma,
-  Github,
-  CloudCog,
+  Bot,
+  SquareTerminal,
+  FileStack, 
+  Lightbulb,
+  Heart,
+  GraduationCap,
+  Smile,
+  Binoculars
 } from "lucide-react";
-
 import { FaDocker, FaLinux } from "react-icons/fa";
-import { RiNextjsLine } from "react-icons/ri";
+import {  RiTeamFill } from "react-icons/ri";
 import {
-  SiTypescript,
-  SiTailwindcss,
-  SiPostgresql,
-  SiMongodb,
-  SiGraphql,
-  SiJest,
-  SiWebpack,
-  SiRedux,
-  SiFirebase,
-  SiVercel,
-  SiVite,
+  SiPython,
+  SiAmazonwebservices,
+  SiGit,
+  SiKubernetes,
+  SiGooglecloud,
+  SiTerraform,
+  SiScikitlearn,
+  SiMlflow,
+  SiKeras,
+  SiTensorflow,
+  SiSnowpack,
+  SiSnowflake,
+  SiApachespark,
+  SiPandas,
+  SiPolars,
+  SiStreamlit,
+  SiLangchain,
+  SiOllama,
+  SiPycharm,
+  SiPoetry,
+  SiPytest,
+  SiJupyter,
+  SiPydantic,
+  SiGnubash,
+  SiGrafana,
+  SiPrometheus,
 } from "react-icons/si";
-import { BsFileEarmarkCode } from "react-icons/bs";
 import { TbBrandVscode } from "react-icons/tb";
 
 interface Skill {
@@ -120,84 +134,104 @@ const SkillsSection = () => {
 
   const skillCategories: SkillCategory[] = [
     {
-      icon: Code2,
-      title: "Frontend Development",
+      icon: BrainCircuit,
+      title: "Machine Learning",
       color: "text-blue-400",
       skills: [
         {
-          name: "React",
-          icon: <FileCode className="w-4 h-4 text-[#61DAFB]" />,
+          name: "Mlflow",
+          icon: <SiMlflow className="w-4 h-4 text-blue-400" />,
         },
         {
-          name: "Next.js",
-          icon: <RiNextjsLine className="w-4 h-4 text-white" />,
+          name: "Scikit-learn",
+          icon: <SiScikitlearn className="w-4 h-4 text-orange-400" />,
         },
         {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+          name: "XGBoost",
+          icon: <BrainCircuit className="w-4 h-4 text-blue-400" />,
         },
         {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+          name: "Keras",
+          icon: <SiKeras className="w-4 h-4 text-red-800" />,
         },
         {
-          name: "HTML5",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
+          name: "TensorFlow",
+          icon: <SiTensorflow className="w-4 h-4 text-orange-400" />,
         },
         {
-          name: "CSS3",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
+          name: "SnowparkML",
+          icon: <SiSnowpack className="w-4 h-4 text-blue-400" />,
+        },
+        {
+          name: "AWS SageMaker",
+          icon: <BrainCircuit className="w-4 h-4 text-violet-400" />,
         },
       ],
     },
     {
-      icon: Database,
-      title: "Backend Development",
+      icon: Server,
+      title: "Data Science",
       color: "text-green-400",
       skills: [
         {
-          name: "Node.js",
-          icon: <Server className="w-4 h-4 text-[#339933]" />,
+          name: "SQL",
+          icon: <Database className="w-4 h-4 text-grey-400" />,
         },
         {
-          name: "Python",
-          icon: <FileCode className="w-4 h-4 text-[#3776AB]" />,
+          name: "Snowflake",
+          icon: <SiSnowflake className="w-4 h-4 text-blue-400" />,
         },
         {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
+          name: "Spark",
+          icon: <SiApachespark className="w-4 h-4 text-orange-400" />,
         },
         {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
+          name: "Pandas",
+          icon: <SiPandas className="w-4 h-4 text-violet-400" />,
         },
         {
-          name: "REST APIs",
-          icon: <Server className="w-4 h-4 text-[#FF6C37]" />,
+          name: "Polars",
+          icon: <SiPolars className="w-4 h-4 text-white-400" />,
         },
         {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+          name: "Pydantic",
+          icon: <SiPydantic className="w-4 h-4 text-pink-400" />,
+        },
+        {
+          name: "Streamlit",
+          icon: <SiStreamlit className="w-4 h-4 text-red-400" />,
+        },
+        {
+          name: "Jupyter",
+          icon: <SiJupyter className="w-4 h-4 text-orange-400" />,
         },
       ],
     },
     {
-      icon: Layout,
-      title: "UI/UX Design",
+      icon: Bot,
+      title: "Generative AI",
       color: "text-purple-400",
       skills: [
-        { name: "Figma", icon: <Figma className="w-4 h-4 text-[#F24E1E]" /> },
+        { name: "Langchain", icon: <SiLangchain className="w-4 h-4 text-blakc-400" /> },
         {
-          name: "Responsive Design",
-          icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
+          name: "Ollama",
+          icon: <SiOllama className="w-4 h-4 text-white-400" />,
         },
         {
-          name: "Wireframing",
-          icon: <Layers className="w-4 h-4 text-[#9CA3AF]" />,
+          name: "AWS Bedrock",
+          icon: <BrainCircuit className="w-4 h-4 text-green-400" />,
         },
         {
-          name: "Prototyping",
-          icon: <Sparkles className="w-4 h-4 text-[#F59E0B]" />,
+          name: "Prompt Engineering",
+          icon: <SquareTerminal className="w-4 h-4 text-blue-400" />,
+        },
+        {
+          name: "RAG",
+          icon: <FileStack className="w-4 h-4 text-violet-400" />,
+        },
+        {
+          name: "Tracing",
+          icon: <Binoculars className="w-4 h-4 text-yellow-400" />,
         },
       ],
     },
@@ -206,21 +240,23 @@ const SkillsSection = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "AWS", icon: <CloudCog className="w-4 h-4 text-[#FF9900]" /> },
+        { name: "AWS", icon: <SiAmazonwebservices className="w-4 h-4 text-white-400" /> },
         {
           name: "Docker",
           icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
         },
         {
           name: "CI/CD",
-          icon: <GitBranch className="w-4 h-4 text-[#2088FF]" />,
+          icon: <GitBranch className="w-4 h-4 text-orange-400" />,
         },
         {
           name: "Kubernetes",
-          icon: <Globe className="w-4 h-4 text-[#326CE5]" />,
+          icon: <SiKubernetes className="w-4 h-4 text-blue-400" />,
         },
-        { name: "Git", icon: <Github className="w-4 h-4 text-[#F05032]" /> },
-        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
+        { name: "Git", icon: <SiGit className="w-4 h-4 text-orange-600" /> },
+        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-yellow-400" /> },
+        { name: "GCP", icon: <SiGooglecloud className="w-4 h-4 text-red-400" /> },
+        { name: "Terraform", icon: <SiTerraform className="w-4 h-4 text-violet-400" /> },
       ],
     },
     {
@@ -229,43 +265,56 @@ const SkillsSection = () => {
       color: "text-pink-400",
       skills: [
         {
+          name: "Python",
+          icon: <SiPython className="w-4 h-4 text-yellow-400" />,
+        },
+        {
+          name: "Pycharm",
+          icon: <SiPycharm className="w-4 h-4 text-grey-400" />,
+        },
+        {
           name: "VS Code",
           icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
         },
-        { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
+        { name: "Poetry", icon: <SiPoetry className="w-4 h-4 text-blue-400" /> },
         {
-          name: "Webpack",
-          icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
+          name: "Pytest",
+          icon: <SiPytest className="w-4 h-4 text-red-400" />,
         },
-        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
-        {
-          name: "Firebase",
-          icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
-        },
-        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
-        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
+        { name: "Bash", icon: <SiGnubash className="w-4 h-4 text-white-400" /> },
+        
+        { name: "Grafana", icon: <SiGrafana className="w-4 h-4 text-orange-400" /> },
+        { name: "Prometheus", icon: <SiPrometheus className="w-4 h-4 text-black-400" /> },
       ],
     },
     {
-      icon: Paintbrush,
-      title: "Creative Skills",
+      icon: Sparkles,
+      title: "Soft Skills",
       color: "text-yellow-400",
       skills: [
         {
-          name: "UI Animation",
-          icon: <Sparkles className="w-4 h-4 text-[#FF4081]" />,
+          name: "Curious",
+          icon: <Lightbulb className="w-4 h-4 text-yellow-400" />,
         },
         {
-          name: "SVG Animation",
-          icon: <Sparkles className="w-4 h-4 text-[#00C853]" />,
+          name: "Passionate",
+          icon: <Heart className="w-4 h-4 text-red-400" />,
         },
         {
-          name: "3D Modeling",
-          icon: <Layers className="w-4 h-4 text-[#7C4DFF]" />,
+          name: "Team Work",
+          icon: <RiTeamFill className="w-4 h-4 text-purple-400" />,
         },
         {
-          name: "Motion Graphics",
-          icon: <Sparkles className="w-4 h-4 text-[#FF6D00]" />,
+          name: "Pedagogical",
+          icon: <GraduationCap className="w-4 h-4 text-green-400" />,
+        },
+        {
+          name: "Creative",
+          icon: <Paintbrush className="w-4 h-4 text-orange-400" />,
+        },
+        {
+          name: "Smiling",
+          icon: <Smile className="w-4 h-4 text-yellow-400" />,
         },
       ],
     },
@@ -336,83 +385,76 @@ const SkillsSection = () => {
               className="[--duration:25s] py-6 hover:opacity-80 transition-opacity"
               repeat={3}
             >
+              <div
+                  className={`p-4 rounded-lg ${
+                    isDark ? "bg-gray-800/50" : "bg-white/80"
+                  } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
+                >
+                  <SiTensorflow className="w-8 h-8 text-orange-400" />
+                </div>
               <div className="flex items-center gap-8 px-4">
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <FileCode className="w-8 h-8 text-[#61DAFB]" />
+                  <SiMlflow className="w-8 h-8 text-blue-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <RiNextjsLine className="w-8 h-8 text-white" />
+                  <SiGnubash className="w-8 h-8 text-white-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiTypescript className="w-8 h-8 text-[#3178C6]" />
+                  <BrainCircuit className="w-8 h-8 text-violet-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiTailwindcss className="w-8 h-8 text-[#38B2AC]" />
+                  <SiScikitlearn className="w-8 h-8 text-orange-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <Server className="w-8 h-8 text-[#339933]" />
+                  <SiOllama className="w-8 h-8 text-white-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiPostgresql className="w-8 h-8 text-[#336791]" />
+                  <SiSnowflake className="w-8 h-8 text-blue-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiMongodb className="w-8 h-8 text-[#47A248]" />
+                  <SiPandas className="w-8 h-8 text-violet-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiGraphql className="w-8 h-8 text-[#E10098]" />
+                  <SiApachespark className="w-8 h-8 text-orange-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <Figma className="w-8 h-8 text-[#F24E1E]" />
-                </div>
-                <div
-                  className={`p-4 rounded-lg ${
-                    isDark ? "bg-gray-800/50" : "bg-white/80"
-                  } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
-                >
-                  <Layout className="w-8 h-8 text-[#38B2AC]" />
-                </div>
-                <div
-                  className={`p-4 rounded-lg ${
-                    isDark ? "bg-gray-800/50" : "bg-white/80"
-                  } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
-                >
-                  <CloudCog className="w-8 h-8 text-[#FF9900]" />
+                  <SiLangchain className="w-8 h-8 text-blakc-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
@@ -426,28 +468,35 @@ const SkillsSection = () => {
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <TbBrandVscode className="w-8 h-8 text-[#007ACC]" />
+                  <SiGit className="w-8 h-8 text-orange-600" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiRedux className="w-8 h-8 text-[#764ABC]" />
+                  <FaLinux className="w-8 h-8 text-yellow-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiFirebase className="w-8 h-8 text-[#FFCA28]" />
+                  <SiAmazonwebservices className="w-8 h-8 text-white-400" />
                 </div>
                 <div
                   className={`p-4 rounded-lg ${
                     isDark ? "bg-gray-800/50" : "bg-white/80"
                   } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
                 >
-                  <SiVite className="w-8 h-8 text-[#646CFF]" />
+                  <SiPytest className="w-8 h-8 text-red-400" />
+                </div>
+                <div
+                  className={`p-4 rounded-lg ${
+                    isDark ? "bg-gray-800/50" : "bg-white/80"
+                  } backdrop-blur-sm transform hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-blue-500/20`}
+                >
+                  <SiPython className="w-8 h-8 text-yellow-400" />
                 </div>
               </div>
             </Marquee>

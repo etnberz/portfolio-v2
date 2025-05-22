@@ -47,6 +47,7 @@ export function Button({
           <div
             className={cn(
               "h-20 w-20 bg-[radial-gradient(#0ea5e9_40%,transparent_60%)] opacity-[0.8]",
+              "pointer-events-none",
               borderClassName
             )}
           />
@@ -127,11 +128,12 @@ export const MovingBorder = ({
       </svg>
       <motion.div
         style={{
-          position: "absolute",
+          position: "relative",
           top: 0,
           left: 0,
           display: "inline-block",
           transform,
+          pointerEvents: "none",
         }}
       >
         {children}
