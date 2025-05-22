@@ -147,7 +147,7 @@ export default function ProfessionalJourney() {
               <div className="md:w-2/3 space-y-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="text-3xl"><Briefcase className="w-7 h-7 text-teal-500" /></span>
+                    <span><Briefcase className="w-7 h-7 text-teal-500" /></span>
                     <h3
                       className={`text-2xl font-bold ${
                         isDark ? "text-white" : "text-gray-900"
