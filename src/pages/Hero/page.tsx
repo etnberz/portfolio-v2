@@ -9,6 +9,33 @@ import { Button } from "../../components/ui/moving-border";
 import { ShootingStars } from "../../components/ui/shooting-stars";
 import config from "@/config/config";
 import { ArrowRightIcon } from "lucide-react";
+import {
+  SiLinkedin, SiMedium, SiGithub
+} from "react-icons/si";
+import { LuBriefcaseBusiness } from "react-icons/lu";
+
+const networks = [
+  {
+    icon: <SiLinkedin className="w-4 h-4 text-blue-600" />,
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/maxime-caitucoli/",
+  },
+  {
+    icon: <SiGithub className="w-4 h-4 text-gray-400" />,
+    title: "Github",
+    link: "https://github.com/etnberz",
+  },
+  {
+    icon: <LuBriefcaseBusiness className="w-4 h-4 text-red-400" />,
+    title: "Malt",
+    link: "https://www.malt.fr/profile/maximecaitucoli",
+  },
+  {
+    icon: <SiMedium className="w-4 h-4 text-gray-200" />,
+    title: "Medium",
+    link: "https://medium.com/@maxime.caitucoli/",
+  }
+];
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -97,6 +124,42 @@ export default function Hero() {
               </div>
 
               <p className="mt-6 text-2xl">{config.information.title}</p>
+
+              {/* Network Badges */}
+              <div className="flex gap-4 mb-3 py-3">
+                {networks.map((network, index) => (
+                  <div
+                    key={index}
+                    className="rounded-full py-1 flex items-center"
+                  >
+                    <div className="z-10 flex items-center justify-center">
+                      <div
+                        className={
+                          "group rounded-full border text-base transition-all ease-in hover:cursor-pointer " +
+                          (theme === "dark"
+                            ? "border-white/20 hover:bg-neutral-800 !text-white"
+                            : "border-black/20 hover:bg-neutral-200 text-black")
+                        }
+                      >
+                        <AnimatedShinyText
+                          className={
+                            "inline-flex items-center justify-center px-4 py-1 w-fit transition ease-out hover:duration-300 " +
+                            (theme === "dark"
+                              ? "text-white hover:text-neutral-300"
+                              : "text-black hover:text-neutral-600")
+                          }
+                        >
+                          <a href={network.link} className="flex items-center gap-2">
+                            {network.icon}
+                            <span>{network.title}</span>
+                            <ArrowRightIcon className="w-4 h-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                          </a>
+                        </AnimatedShinyText>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
               <div className="mt-8 flex space-x-4">
                 <div className="z-10 flex items-center justify-center">

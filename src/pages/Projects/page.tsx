@@ -1,7 +1,4 @@
 import { Github, ExternalLink } from "lucide-react";
-import olova from "@/assets/projects/olova-B0FjVVEL.png";
-import portfolio from "@/assets/projects/Annotation 2025-03-20 155334.png";
-import codekori from "@/assets/projects/codekori.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTheme } from "@/provider/page";
 
@@ -19,42 +16,16 @@ const ProjectShowcase = () => {
 
   const projects = [
     {
-      title: "Olova! A Lightweight JavaScript Library",
+      title: "RobotHood",
       description:
-        "Olova.js is a lightweight JavaScript library for building modern, reactive, and dynamic web applications. It features a simple, component-based architecture, enabling developers to create reusable and interactive UI elements with minimal code and overhead.",
-      tags: ["JavaScript", "Reactive", "Web Development"],
+        "RobotHood is a generous crypto currencies trading bot giving its profits to non-governmental organisations.",
+      tags: ["Python", "Docker", "Bash", "Github Actions", "Discord", "Asyncio"],
       links: {
-        github: "https://github.com/olovajs/olova",
-        demo: "https://olova.js.org/",
+        github: "https://github.com/etnberz/dummy_robothood",
+        demo: "https://medium.com/@maxime.caitucoli/a-crypto-trading-bot-for-the-greater-good-1e04cb7bbe54",
       },
-      image: olova,
-      featured: true,
-    },
-    {
-      title:
-        "A sleek portfolio built with React and Tailwind CSS to showcase your skills",
-      description:
-        "This portfolio is a sleek and modern showcase of my skills and projects. It's built with React and Tailwind CSS, providing a clean and professional look that reflects my professional brand.",
-      tags: ["React", "Tailwind CSS", "Portfolio", "Typescript"],
-      links: {
-        github: "https://github.com/seraprogrammer/portfolio",
-        demo: "https://codervai.vercel.app/",
-      },
-      image: portfolio,
-      featured: true,
-    },
-    {
-      title:
-        "CodeKori is an open-source online code editor with built-in AI, completely free to use",
-      description:
-        "This portfolio is a sleek and modern showcase of my skills and projects. It's built with React and Tailwind CSS, providing a clean and professional look that reflects my professional brand.",
-      tags: ["React", "Tailwind CSS", "Portfolio", "Typescript"],
-      links: {
-        github: "https://github.com/seraprogrammer/CodeKori",
-        demo: "https://codekori.js.org/",
-      },
-      image: codekori,
-      featured: true,
+      image: "https://raw.githubusercontent.com/etnberz/dummy_robothood/master/static/img/robothood.png",
+      featured: false,
     },
   ];
 
