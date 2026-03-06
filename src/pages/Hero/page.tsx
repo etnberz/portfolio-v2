@@ -43,11 +43,10 @@ export default function Hero() {
   return (
     <>
       <div
-        className={`hero min-h-screen pt-16 relative ${
-          theme === "dark"
+        className={`hero min-h-screen pt-16 relative ${theme === "dark"
             ? "bg-[#090f1c] text-white"
             : "bg-white text-gray-900"
-        }`}
+          }`}
       >
         {/* Spotlight */}
         <div className="pointer-events-none absolute inset-0 z-30 transition-all">
@@ -105,19 +104,17 @@ export default function Hero() {
 
               <div className="mt-8 inline-block">
                 <div
-                  className={`py-3 px-6 rounded-md border ${
-                    theme === "dark"
+                  className={`py-3 px-6 rounded-md border ${theme === "dark"
                       ? "border-gray-700 bg-gray-800/30"
                       : "border-gray-200 bg-gray-100"
-                  }`}
+                    }`}
                 >
                   <span className="font-medium text-2xl">
                     <FlipWords
                       words={config.flipWords}
                       duration={3000}
-                      className={`font-medium ${
-                        theme === "dark" ? "text-gray-200" : "text-gray-800"
-                      }`}
+                      className={`font-medium ${theme === "dark" ? "text-gray-200" : "text-gray-800"
+                        }`}
                     />
                   </span>
                 </div>
@@ -167,15 +164,15 @@ export default function Hero() {
                     href="#about"
                     className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
                   >
-                     <Button className="cursor-pointer">Learn More</Button>
+                    <Button className="cursor-pointer">Learn More</Button>
                   </a>
                 </div>
                 <div className="z-10 flex items-center justify-center">
                   <a
-                    href="/cv.pdf"
+                    href="/cv_maxime_caitucoli.pdf"
                     className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
                   >
-                     <Button className="cursor-pointer">Get Resume</Button>
+                    <Button className="cursor-pointer">Get Resume</Button>
                   </a>
                 </div>
               </div>
