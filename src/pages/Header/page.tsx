@@ -58,7 +58,7 @@ export default function Header() {
         <div className="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
           <nav
             className={`${theme === "dark" ? "bg-[#090F1C]/90" : "bg-white/90"
-              } backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5`}
+              } backdrop-blur-md md:rounded-full px-2 md:px-6 py-2.5 max-w-[100vw] overflow-x-auto overflow-y-hidden`}
           >
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
@@ -102,7 +102,7 @@ export default function Header() {
 
             {/* Navigation Links */}
             <div className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
+              <div className="flex flex-col md:flex-row md:items-center gap-1 lg:gap-2 py-4 md:py-0">
                 {navLinks.map(({ id, icon: Icon, text, path }) => (
                   <Link
                     key={id}
@@ -111,8 +111,8 @@ export default function Header() {
                       setActiveLink(id);
                       setIsMenuOpen(false);
                     }}
-                    className={`px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
-                      transition-all duration-300 flex items-center gap-2
+                    className={`px-2 lg:px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-xs md:text-sm font-medium
+                      transition-all duration-300 flex items-center gap-1.5 md:gap-2
                       hover:bg-${theme === "dark" ? "white" : "gray-900"}/10 
                       ${activeLink === id
                         ? `bg-${theme === "dark" ? "white" : "gray-900"}/15 ${theme === "dark" ? "text-white" : "text-gray-900"
@@ -125,8 +125,7 @@ export default function Header() {
                     `}
                   >
                     <Icon
-                      size={20}
-                      className={`${activeLink === id ? "scale-110" : ""
+                      className={`w-[18px] h-[18px] md:w-5 md:h-5 ${activeLink === id ? "scale-110" : ""
                         } hover:scale-110 transition-transform`}
                     />
                     <span className="inline">{text}</span>

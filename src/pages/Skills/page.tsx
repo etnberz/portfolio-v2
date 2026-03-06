@@ -320,36 +320,6 @@ const SkillsSection = () => {
       className={`lg:pt-0 flex flex-col items-center justify-center ${isDark ? "bg-[#090F1C] text-white" : "bg-gray-50 text-gray-900"
         } min-h-screen flex items-center justify-center`}
     >
-      <div className="text-center mb-8">
-        <h1
-          className={`text-4xl font-bold ${isDark ? "text-white" : "text-gray-900"
-            } bg-clip-text text-transparent bg-gradient-to-r ${isDark
-              ? "from-blue-400 via-purple-400 to-pink-400"
-              : "from-blue-600 via-purple-600 to-pink-600"
-            }`}
-        >
-          My Tech Stack
-        </h1>
-      </div>
-
-      <div className="text-center">
-        <div
-          className={`inline-flex items-center gap-2 px-4 py-1 rounded-full ${isDark ? "bg-white/5" : "bg-black/5"
-            } backdrop-blur-sm border ${isDark ? "border-white/10" : "border-black/10"
-            }`}
-        >
-          <span
-            className={`text-sm font-medium tracking-wider uppercase ${isDark ? "text-blue-300" : "text-blue-600"
-              }`}
-          >
-            Technologies I work with
-          </span>
-          <span
-            className={`inline-block w-1.5 h-1.5 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"
-              } animate-pulse`}
-          ></span>
-        </div>
-      </div>
 
       <section className="relative w-full overflow-hidden py-8">
         <div
