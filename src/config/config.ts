@@ -22,7 +22,7 @@ const config = {
         self.hard_worker = True
         self.quick_learner = True
         self.problem_solver = True
-        self.years_of_experience = 5
+        self.years_of_experience = 7
 
     def is_hireable(self):
         return (
