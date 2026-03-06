@@ -1,6 +1,5 @@
 import HeroImg from "../../assets/hero.jpg";
 import { useTheme } from "../../provider/page";
-import OlovaLogo from "../../assets/olova.png";
 
 export default function About() {
   const { theme } = useTheme();
@@ -9,41 +8,36 @@ export default function About() {
     <>
       <section
         id="about"
-        className={`py-16 md:py-32 ${
-          theme === "dark"
+        className={`py-16 md:py-32 ${theme === "dark"
             ? "bg-[#090f1c] text-white"
             : "bg-white text-gray-900"
-        }`}
+          }`}
       >
-        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
+        <div id="about_me" className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2
-            className={`relative z-10 max-w-xl text-4xl font-medium lg:text-5xl ${
-              theme === "dark" ? "text-white" : "text-gray-900"
-            }`}
+            className={`relative z-10 max-w-xl text-4xl font-medium lg:text-5xl ${theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
           >
-            Developer, Designer, Creator, Innovator
+            Let's build AI Together!
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
               <div
-                className={`bg-linear-to-b aspect-76/59 relative rounded-2xl p-px ${
-                  theme === "dark" ? "from-zinc-700" : "from-zinc-300"
-                } to-transparent`}
+                className={`bg-linear-to-b aspect-76/59 relative rounded-2xl p-px ${theme === "dark" ? "from-zinc-700" : "from-zinc-300"
+                  } to-transparent`}
               >
                 <img
                   src={HeroImg}
-                  className={`rounded-[15px] ${
-                    theme === "dark" ? "block" : "hidden"
-                  }`}
+                  className={`rounded-[15px] ${theme === "dark" ? "block" : "hidden"
+                    }`}
                   alt="payments illustration dark"
                   width={1207}
                   height={929}
                 />
                 <img
                   src={HeroImg}
-                  className={`rounded-[15px] shadow ${
-                    theme === "dark" ? "hidden" : "block"
-                  }`}
+                  className={`rounded-[15px] shadow ${theme === "dark" ? "hidden" : "block"
+                    }`}
                   alt="payments illustration light"
                   width={1207}
                   height={929}
@@ -51,74 +45,39 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative space-y-4">
+            <div className="relative space-y-4 justify-evenly">
               <p
-                className={`${
-                  theme === "dark" ? "text-gray-300" : "text-gray-600"
-                }`}
-              >
-                Hello! I'm Nazmul Hossain, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
-                <span
-                  className={`font-bold ${
-                    theme === "dark" ? "text-white" : "text-gray-900"
+                className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"
                   }`}
+              >
+                <span
+                  className={`font-bold ${theme === "dark" ? "text-white" : "text-gray-900"
+                    }`}
                 >
-                  As the creator of the OlovaJS UI Framework
+                  ML Engineer since 2019
                 </span>
-                , I'm dedicated to simplifying development workflows.
+                , I will support you in your Data/AI projects: from data extraction to the deployment
+                of predictive models (ML/LLM) in production, let's build AI processes that fits your organization's needs!
+                I have a strong expertise of Python and its associated ML libraries, as well as a deep understanding of the challenges
+                related to the model lifecycle.{" "}
               </p>
               <p
-                className={`${
-                  theme === "dark" ? "text-gray-300" : "text-gray-600"
-                }`}
+                className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"
+                  }`}
               >
-                My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                With a focus on code quality, I manage my projects using an MLOps approach: Experiment Tracking,
+                Feature Store, Model Registry, Monitoring, Cloud Deployment, Unit and Integration Testing,
+                Dependency Management, CI/CD, Git Versioning...
               </p>
-
-              <div className="pt-6">
-                <blockquote
-                  className={`border-l-4 ${
-                    theme === "dark" ? "border-gray-700" : "border-gray-300"
-                  } pl-4`}
-                >
-                  <p
-                    className={
-                      theme === "dark" ? "text-gray-300" : "text-gray-600"
-                    }
-                  >
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
-                  </p>
-
-                  <div className="mt-6 space-y-3">
-                    <cite
-                      className={`block font-medium ${
-                        theme === "dark" ? "text-white" : "text-gray-900"
-                      }`}
-                    >
-                      Nazmul Hossain, Creator of 
-                    </cite>
-                    <div className="flex items-center gap-2">
-                      <img
-                        className={`h-5 w-fit ${theme === "dark" ? "" : ""}`}
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span>OlovaJS</span>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
+              <p
+                className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"
+                  }`}
+              >
+                Naturally curious, I am passionate about
+                knowledge sharing, the exchange of ideas, and teaching MLOps concepts. Transferring expertise
+                and training teams are an integral part of my approach: I enjoy creating an environment
+                where everyone can learn, grow, and thrive.
+              </p>
             </div>
           </div>
         </div>

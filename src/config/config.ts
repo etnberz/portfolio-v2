@@ -1,34 +1,36 @@
 const config = {
   information: {
-    name: "Nazmul Hossain",
+    name: "Maxime Caïtucoli",
     helloText: "Hello",
     welcomeText: "✨ Welcome to my universe",
-    title: "JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks",
-    title3: "and coding the future 💻 ✨",
+    title: "ML Ops Engineer 🚀 | AWS Certified MLA 🧑‍🎓 | AI System Builder 🔧",
+    title3: "And coding the future 💻 ✨",
   },
-  flipWords: ["Linux & GitHub for DevOps", "Cloud Computing", "Crafting frameworks", "Frontend Web Developer"],
+  flipWords: ["MLOps for AI Systems", "AWS Certified MLA", "Crafting LLM Apps", "Data Enthusiast"],
   codeContent: {
-    code: `const profile = {
-  name: 'Nazmul Hossain',
-  title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
-  skills: [
-    'React', 'NextJS', 'Redux', 'Express',
-    'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-    'GraphQL', 'Git', 'Linux', 'Discord Development'
-  ],
-  hardWorker: true,
-  quickLearner: true, 
-  problemSolver: true,
-  yearsOfExperience: 4,
-  hireable: function() {
-    return (
-      this.hardWorker &&
-      this.problemSolver &&
-      this.skills.length > 5 &&
-      this.yearsOfExperience >= 3
-    );
-  }
-};`,
+    code: `class Profile:
+    def __init__(self):
+        self.name = "Maxime Caïtucoli"
+        self.title = "Full-Stack ML/LLM Engineer | Cloud Enthusiast | Problem Solver"
+        self.skills = [
+            "Python", "MLOps", "Data Science", "Machine Learning", "LLM",
+            "Pandas", "LangChain", "Scikit-learn", "Keras", "TensorFlow",
+            "Snowflake", "Spark", "SQL", "Streamlit", "MLflow", "Poetry",
+            "AWS", "Git" , "CI/CD", "Unit Testing", "Monitoring",
+            "Linux", "Docker", "Kubernetes", "Terraform"
+        ]
+        self.hard_worker = True
+        self.quick_learner = True
+        self.problem_solver = True
+        self.years_of_experience = 7
+
+    def is_hireable(self):
+        return (
+            self.hard_worker and
+            self.problem_solver and
+            len(self.skills) > 5 and
+            self.years_of_experience >= 3
+        )`,
   },
 };
 

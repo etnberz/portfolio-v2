@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router";
 import {
   Home,
-  Laptop,
   Briefcase,
   GraduationCap,
   Code,
@@ -47,39 +46,34 @@ export default function Header() {
       text: "Education",
       path: "/education",
     },
-    { id: "projects", icon: Laptop, text: "Projects", path: "/projects" },
     { id: "contact", icon: Mail, text: "Contact", path: "/contact" },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 ${
-        theme === "dark" ? "bg-[#090F1C]/95" : "bg-white/95"
-      } backdrop-blur-md md:bg-transparent md:backdrop-blur-none`}
+      className={`fixed top-0 left-0 w-full z-50 ${theme === "dark" ? "bg-[#090F1C]/95" : "bg-white/95"
+        } backdrop-blur-md md:bg-transparent md:backdrop-blur-none`}
     >
       <div className="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
         <div className="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
           <nav
-            className={`${
-              theme === "dark" ? "bg-[#090F1C]/90" : "bg-white/90"
-            } backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5`}
+            className={`${theme === "dark" ? "bg-[#090F1C]/90" : "bg-white/90"
+              } backdrop-blur-md md:rounded-full px-2 md:px-6 py-2.5 max-w-[100vw] overflow-x-auto overflow-y-hidden`}
           >
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
               <Link
                 to="/"
-                className={`${
-                  theme === "dark" ? "text-white" : "text-gray-900"
-                } font-bold`}
+                className={`${theme === "dark" ? "text-white" : "text-gray-900"
+                  } font-bold`}
               >
                 Portfolio
               </Link>
               <div className="flex items-center gap-2">
                 <button
                   onClick={toggleTheme}
-                  className={`${
-                    theme === "dark" ? "text-white" : "text-gray-900"
-                  } p-2`}
+                  className={`${theme === "dark" ? "text-white" : "text-gray-900"
+                    } p-2`}
                 >
                   {theme === "dark" ? (
                     <Sun
@@ -95,9 +89,8 @@ export default function Header() {
                 </button>
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className={`${
-                    theme === "dark" ? "text-white" : "text-gray-900"
-                  } p-2`}
+                  className={`${theme === "dark" ? "text-white" : "text-gray-900"
+                    } p-2`}
                 >
                   <Menu
                     size={26}
@@ -109,7 +102,7 @@ export default function Header() {
 
             {/* Navigation Links */}
             <div className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
+              <div className="flex flex-col md:flex-row md:items-center gap-1 lg:gap-2 py-4 md:py-0">
                 {navLinks.map(({ id, icon: Icon, text, path }) => (
                   <Link
                     key={id}
@@ -118,27 +111,22 @@ export default function Header() {
                       setActiveLink(id);
                       setIsMenuOpen(false);
                     }}
-                    className={`px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
-                      transition-all duration-300 flex items-center gap-2
+                    className={`px-2 lg:px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-xs md:text-sm font-medium
+                      transition-all duration-300 flex items-center gap-1.5 md:gap-2
                       hover:bg-${theme === "dark" ? "white" : "gray-900"}/10 
-                      ${
-                        activeLink === id
-                          ? `bg-${theme === "dark" ? "white" : "gray-900"}/15 ${
-                              theme === "dark" ? "text-white" : "text-gray-900"
-                            }`
-                          : `${
-                              theme === "dark"
-                                ? "text-gray-300 hover:text-white"
-                                : "text-gray-600 hover:text-gray-900"
-                            }`
+                      ${activeLink === id
+                        ? `bg-${theme === "dark" ? "white" : "gray-900"}/15 ${theme === "dark" ? "text-white" : "text-gray-900"
+                        }`
+                        : `${theme === "dark"
+                          ? "text-gray-300 hover:text-white"
+                          : "text-gray-600 hover:text-gray-900"
+                        }`
                       }
                     `}
                   >
                     <Icon
-                      size={20}
-                      className={`${
-                        activeLink === id ? "scale-110" : ""
-                      } hover:scale-110 transition-transform`}
+                      className={`w-[18px] h-[18px] md:w-5 md:h-5 ${activeLink === id ? "scale-110" : ""
+                        } hover:scale-110 transition-transform`}
                     />
                     <span className="inline">{text}</span>
                   </Link>
@@ -146,10 +134,9 @@ export default function Header() {
                 <button
                   onClick={toggleTheme}
                   className={`hidden md:flex px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
-                    transition-all duration-300 items-center gap-2 ${
-                      theme === "dark"
-                        ? "text-gray-300 hover:text-white"
-                        : "text-gray-600 hover:text-gray-900"
+                    transition-all duration-300 items-center gap-2 ${theme === "dark"
+                      ? "text-gray-300 hover:text-white"
+                      : "text-gray-600 hover:text-gray-900"
                     } hover:bg-${theme === "dark" ? "white" : "gray-900"}/10`}
                 >
                   {theme === "dark" ? (
