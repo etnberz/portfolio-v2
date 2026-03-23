@@ -1,6 +1,7 @@
 import { Calendar, BookOpen, GraduationCap, ExternalLink, Award } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/provider/page";
+import { useTranslation } from "react-i18next";
 import { SiAmazonwebservices, SiKubernetes, SiMlflow, SiTerraform } from "react-icons/si";
 import kubernetes from "@/assets/certifs/kubernetes.pdf";
 import mlflow from "@/assets/certifs/mlflow.pdf";
@@ -46,23 +47,23 @@ const certifs: Certif[] = [
   },
 ];
 
-const educationData = [
-  {
-    degree: "Engineering Master Degree",
-    school: "IMT Mines Albi",
-    year: "2016 - 2019",
-    skills: ["Data Science", "Machine Learning", "Python", "IoT", "Energy Engineering", "Project Management"],
-    subtitle: "Focus on Data Science and Energy Systems",
-    description:
-      "A rigorous engineering program combining advanced scientific theory with practical applications. I specialized in Data Science while maintaining a strong foundation in Energy Engineering, covering everything from Thermodynamics to Smart Grids. This interdisciplinary approach prepared me to tackle complex, systemic challenges in evolving industries.",
-  }
-];
+// Removed static educationData array
 
 const EducationSection = () => {
   // 💡 Amélioration : isDarkMode est gardé pour des cas spécifiques, mais il est recommandé
   // d'utiliser les classes Tailwind "dark:..." pour la gestion des thèmes lorsque possible.
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
+  const { t } = useTranslation();
+
+  const educationData = t("education.degrees", { returnObjects: true }) as Array<{
+    degree: string;
+    school: string;
+    year: string;
+    subtitle: string;
+    description: string;
+    skills: string[];
+  }>;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -102,7 +103,7 @@ const EducationSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
-            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Learning Journey</span>
+            {t("education.heading")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">{t("education.headingHighlight")}</span>
           </h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto rounded-full" />
         </motion.div>
@@ -117,7 +118,7 @@ const EducationSection = () => {
               <div className="p-3 rounded-2xl bg-teal-500/10 text-teal-500">
                 <GraduationCap className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold italic tracking-wide">Academic Foundations</h3>
+              <h3 className="text-2xl font-bold italic tracking-wide">{t("education.academicTitle")}</h3>
             </div>
 
             <motion.div
@@ -186,7 +187,7 @@ const EducationSection = () => {
               <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-500">
                 <Award className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold italic tracking-wide">Professional Certifications</h3>
+              <h3 className="text-2xl font-bold italic tracking-wide">{t("education.certsTitle")}</h3>
             </div>
 
             <motion.div

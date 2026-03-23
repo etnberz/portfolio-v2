@@ -11,6 +11,7 @@ import {
   Moon,
 } from "lucide-react";
 import { useTheme } from "../../provider/page";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const location = useLocation();
@@ -20,6 +21,11 @@ export default function Header() {
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,22 +38,24 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { id: "home", icon: Home, text: "Home", path: "/" },
-    { id: "skills", icon: Code, text: "Skills", path: "/skills" },
+    { id: "home", icon: Home, text: t("nav.home"), path: "/" },
+    { id: "skills", icon: Code, text: t("nav.skills"), path: "/skills" },
     {
       id: "experience",
       icon: Briefcase,
-      text: "Experience",
+      text: t("nav.experience"),
       path: "/experience",
     },
     {
       id: "education",
       icon: GraduationCap,
-      text: "Education",
+      text: t("nav.education"),
       path: "/education",
     },
-    { id: "contact", icon: Mail, text: "Contact", path: "/contact" },
+    { id: "contact", icon: Mail, text: t("nav.contact"), path: "/contact" },
   ];
+
+  const langLabel = i18n.language === "en" ? "FR" : "EN";
 
   return (
     <header
@@ -70,6 +78,14 @@ export default function Header() {
                 Portfolio
               </Link>
               <div className="flex items-center gap-2">
+                {/* Language toggle — mobile */}
+                <button
+                  onClick={toggleLanguage}
+                  className={`${theme === "dark" ? "text-white" : "text-gray-900"
+                    } p-2 text-xs font-bold tracking-widest`}
+                >
+                  {langLabel}
+                </button>
                 <button
                   onClick={toggleTheme}
                   className={`${theme === "dark" ? "text-white" : "text-gray-900"
@@ -131,6 +147,8 @@ export default function Header() {
                     <span className="inline">{text}</span>
                   </Link>
                 ))}
+
+                {/* Desktop: theme + language toggles */}
                 <button
                   onClick={toggleTheme}
                   className={`hidden md:flex px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
@@ -150,6 +168,17 @@ export default function Header() {
                       className="hover:text-blue-400 transition-colors"
                     />
                   )}
+                </button>
+
+                <button
+                  onClick={toggleLanguage}
+                  className={`hidden md:flex px-3 py-1.5 rounded-full text-xs font-bold tracking-widest border transition-all duration-300
+                    ${theme === "dark"
+                      ? "border-white/20 text-gray-300 hover:text-white hover:bg-white/10"
+                      : "border-black/20 text-gray-600 hover:text-gray-900 hover:bg-black/10"
+                    }`}
+                >
+                  {langLabel}
                 </button>
               </div>
             </div>

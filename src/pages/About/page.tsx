@@ -1,16 +1,18 @@
 import HeroImg from "../../assets/hero.jpg";
 import { useTheme } from "../../provider/page";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <>
       <section
         id="about"
         className={`py-16 md:py-32 ${theme === "dark"
-            ? "bg-[#090f1c] text-white"
-            : "bg-white text-gray-900"
+          ? "bg-[#090f1c] text-white"
+          : "bg-white text-gray-900"
           }`}
       >
         <div id="about_me" className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
@@ -18,7 +20,7 @@ export default function About() {
             className={`relative z-10 max-w-xl text-4xl font-medium lg:text-5xl ${theme === "dark" ? "text-white" : "text-gray-900"
               }`}
           >
-            Let's build AI Together!
+            {t("about.heading")}
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
@@ -54,29 +56,21 @@ export default function About() {
                   className={`font-bold ${theme === "dark" ? "text-white" : "text-gray-900"
                     }`}
                 >
-                  ML Engineer since 2019
+                  {t("about.p1_bold")}
                 </span>
-                , I will support you in your Data/AI projects: from data extraction to the deployment
-                of predictive models (ML/LLM) in production, let's build AI processes that fits your organization's needs!
-                I have a strong expertise of Python and its associated ML libraries, as well as a deep understanding of the challenges
-                related to the model lifecycle.{" "}
+                {t("about.p1")}
               </p>
               <p
                 className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                With a focus on code quality, I manage my projects using an MLOps approach: Experiment Tracking,
-                Feature Store, Model Registry, Monitoring, Cloud Deployment, Unit and Integration Testing,
-                Dependency Management, CI/CD, Git Versioning...
+                {t("about.p2")}
               </p>
               <p
                 className={`${theme === "dark" ? "text-gray-300" : "text-gray-600"
                   }`}
               >
-                Naturally curious, I am passionate about
-                knowledge sharing, the exchange of ideas, and teaching MLOps concepts. Transferring expertise
-                and training teams are an integral part of my approach: I enjoy creating an environment
-                where everyone can learn, grow, and thrive.
+                {t("about.p3")}
               </p>
             </div>
           </div>

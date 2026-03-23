@@ -1,6 +1,7 @@
 import { Github, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTheme } from "@/provider/page";
+import { useTranslation } from "react-i18next";
 
 const MacOsButtons = () => (
   <div className="flex gap-2 mb-4">
@@ -13,12 +14,17 @@ const MacOsButtons = () => (
 const ProjectShowcase = () => {
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
+  const { t } = useTranslation();
+
+  const projectTranslations = t("projects.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+  }>;
 
   const projects = [
     {
-      title: "RobotHood",
-      description:
-        "RobotHood is a generous crypto currencies trading bot giving its profits to non-governmental organisations.",
+      title: projectTranslations[0]?.title || "RobotHood",
+      description: projectTranslations[0]?.description || "RobotHood is a generous...",
       tags: ["Python", "Docker", "Bash", "Github Actions", "Discord", "Asyncio"],
       links: {
         github: "https://github.com/etnberz/dummy_robothood",
@@ -32,8 +38,8 @@ const ProjectShowcase = () => {
   return (
     <div
       className={`pt-20 md:pt-40 min-h-screen p-4 md:p-8 ${isDarkMode
-          ? "bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-slate-100"
-          : "bg-gradient-to-b from-[#f0f4f8] via-[#e2e8f0] to-[#cbd5e1] text-gray-900"
+        ? "bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-slate-100"
+        : "bg-gradient-to-b from-[#f0f4f8] via-[#e2e8f0] to-[#cbd5e1] text-gray-900"
         }`}
     >
       <div className="max-w-7xl mx-auto space-y-12">
@@ -54,8 +60,8 @@ const ProjectShowcase = () => {
             {/* Text Section */}
             <Card
               className={`md:w-1/2 rounded-lg overflow-hidden shadow-md transition-transform duration-500 group-hover:scale-105 group-hover:shadow-2xl p-6 ${isDarkMode
-                  ? "bg-gradient-to-br from-slate-800 to-gray-900"
-                  : "bg-gradient-to-br from-white to-gray-100"
+                ? "bg-gradient-to-br from-slate-800 to-gray-900"
+                : "bg-gradient-to-br from-white to-gray-100"
                 }`}
             >
               <MacOsButtons />
@@ -64,7 +70,7 @@ const ProjectShowcase = () => {
                 <div className="flex justify-between items-start">
                   <div>
                     <div className="text-emerald-400 text-sm font-mono mb-2 tracking-wide uppercase">
-                      Featured Project
+                      {t("projects.featuredLabel")}
                     </div>
                     <CardTitle
                       className={`text-3xl font-bold ${isDarkMode ? "text-slate-100" : "text-gray-900"
