@@ -121,7 +121,7 @@ export default function ProfessionalJourney() {
 
   return (
     <div
-      className={`pt-40 min-h-screen p-8 ${isDark
+      className={`pt-20 md:pt-40 min-h-screen p-4 md:p-8 ${isDark
         ? "bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-slate-100"
         : "bg-gradient-to-b from-[#f0f4f8] via-[#e2e8f0] to-[#cbd5e1] text-gray-900"
         }`}
@@ -138,16 +138,16 @@ export default function ProfessionalJourney() {
             <motion.div
               key={index}
               variants={cardVariants}
-              className={`flex flex-col gap-10 mb-4 md:flex-row items-center group rounded-lg relative border p-8 transition-all duration-300 ${isDark ? "bg-gray-900/50" : "bg-white/50"
+              className={`flex flex-col gap-6 md:gap-10 mb-4 md:flex-row items-center group rounded-lg relative border p-4 md:p-8 transition-all duration-300 ${isDark ? "bg-gray-900/50" : "bg-white/50"
                 } backdrop-blur-lg ${hoveredIndex === index
-                  ? "border-teal-500 scale-[1.05] shadow-lg"
+                  ? "border-teal-500 md:scale-[1.05] shadow-lg"
                   : "border-blue-400/20"
                 }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Image Section */}
-              <div className="md:w-1/3 overflow-hidden rounded-lg">
+              <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
                 <img
                   src={edu.image}
                   alt={edu.title}
@@ -190,16 +190,16 @@ export default function ProfessionalJourney() {
                   {edu.intro}
                 </p>
 
-                <div className="block block-col gap-2">
-                  {edu.description.map((desc) => (
+                <ul className="list-disc pl-5 space-y-1">
+                  {edu.description.map((desc, i) => (
                     <li
-                      className={`${isDark ? "text-gray-200" : "text-gray-600"
-                        }`}
+                      key={i}
+                      className={`${isDark ? "text-gray-200" : "text-gray-600"}`}
                     >
                       {desc}
                     </li>
                   ))}
-                </div>
+                </ul>
 
                 <div className="flex flex-wrap gap-2">
                   {edu.skills.map((skill, i) => (

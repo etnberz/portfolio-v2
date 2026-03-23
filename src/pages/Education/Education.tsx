@@ -83,7 +83,7 @@ const EducationSection = () => {
 
   return (
     <section
-      className={`min-h-screen relative overflow-hidden py-32 transition-colors duration-500 ${isDarkMode
+      className={`min-h-screen relative overflow-hidden pt-20 pb-16 md:py-32 transition-colors duration-500 ${isDarkMode
         ? "bg-[#020617] text-white"
         : "bg-[#f8fafc] text-slate-900"
         }`}
@@ -94,7 +94,7 @@ const EducationSection = () => {
         <div className={`absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full blur-[120px] ${isDarkMode ? "bg-blue-500/20" : "bg-blue-200/40"}`} />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 lg:max-w-7xl">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 lg:max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -116,25 +116,23 @@ export default function Contact() {
 
   return (
     <main
-      className={`min-h-screen flex items-center justify-center ${
-        isDarkMode
+      className={`min-h-screen flex items-center justify-center pt-20 md:pt-0 ${isDarkMode
           ? "bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-white"
           : "bg-gradient-to-r from-[#f0f4f8] via-[#e2e8f0] to-[#cbd5e1] text-gray-900"
-      }`}
+        }`}
     >
       <section className="w-full py-8 px-4 sm:px-6 lg:px-8 flex items-center">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Contact Info */}
-            <div className="space-y-8 backdrop-blur-sm p-8 rounded-3xl border border-white/10 shadow-lg bg-gradient-to-br from-white/5 to-white/10">
+            <div className="order-2 lg:order-1 space-y-8 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-white/10 shadow-lg bg-gradient-to-br from-white/5 to-white/10">
               <div>
                 <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                   Get in Touch
                 </h2>
                 <p
-                  className={`text-lg ${
-                    isDarkMode ? "text-gray-300" : "text-gray-700"
-                  }`}
+                  className={`text-lg ${isDarkMode ? "text-gray-300" : "text-gray-700"
+                    }`}
                 >
                   Have a question or want to work together? Drop us a message!
                 </p>
@@ -148,9 +146,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <p
-                      className={`${
-                        isDarkMode ? "text-gray-400" : "text-gray-600"
-                      }`}
+                      className={`${isDarkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
                     >
                       maxime.caitucoli@live.fr
                     </p>
@@ -164,9 +161,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold">Location</h3>
                     <p
-                      className={`${
-                        isDarkMode ? "text-gray-400" : "text-gray-600"
-                      }`}
+                      className={`${isDarkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
                     >
                       Bordeaux, France
                     </p>
@@ -177,11 +173,10 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div
-              className={`backdrop-blur-xl p-8 rounded-3xl shadow-2xl border ${
-                isDarkMode
+              className={`order-1 lg:order-2 backdrop-blur-xl p-6 md:p-8 rounded-3xl shadow-2xl border ${isDarkMode
                   ? "border-white/10 bg-white/5"
                   : "border-white/20 bg-white/30"
-              } transition-all duration-300`}
+                } transition-all duration-300`}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6">
@@ -190,13 +185,12 @@ export default function Contact() {
                       type="text"
                       name="name"
                       placeholder="Your Name"
-                      className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.name
+                      className={`w-full px-4 py-3 rounded-xl border ${errors.name
                           ? "border-red-500"
                           : isDarkMode
-                          ? "border-gray-700/50 bg-white/5 text-white"
-                          : "border-gray-300/50 bg-white/30 text-gray-800"
-                      } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
+                            ? "border-gray-700/50 bg-white/5 text-white"
+                            : "border-gray-300/50 bg-white/30 text-gray-800"
+                        } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
                       value={formData.name}
                       onChange={handleInputChange}
                     />
@@ -210,13 +204,12 @@ export default function Contact() {
                       type="email"
                       name="email"
                       placeholder="Your Email"
-                      className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.email
+                      className={`w-full px-4 py-3 rounded-xl border ${errors.email
                           ? "border-red-500"
                           : isDarkMode
-                          ? "border-gray-700/50 bg-white/5 text-white"
-                          : "border-gray-300/50 bg-white/30 text-gray-800"
-                      } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
+                            ? "border-gray-700/50 bg-white/5 text-white"
+                            : "border-gray-300/50 bg-white/30 text-gray-800"
+                        } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
                       value={formData.email}
                       onChange={handleInputChange}
                     />
@@ -232,13 +225,12 @@ export default function Contact() {
                       type="text"
                       name="subject"
                       placeholder="Subject"
-                      className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.subject
+                      className={`w-full px-4 py-3 rounded-xl border ${errors.subject
                           ? "border-red-500"
                           : isDarkMode
-                          ? "border-gray-700/50 bg-white/5 text-white"
-                          : "border-gray-300/50 bg-white/30 text-gray-800"
-                      } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
+                            ? "border-gray-700/50 bg-white/5 text-white"
+                            : "border-gray-300/50 bg-white/30 text-gray-800"
+                        } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
                       value={formData.subject}
                       onChange={handleInputChange}
                     />
@@ -254,13 +246,12 @@ export default function Contact() {
                       name="message"
                       placeholder="Your Message"
                       rows={4}
-                      className={`w-full px-4 py-3 rounded-xl border resize-none ${
-                        errors.message
+                      className={`w-full px-4 py-3 rounded-xl border resize-none ${errors.message
                           ? "border-red-500"
                           : isDarkMode
-                          ? "border-gray-700/50 bg-white/5 text-white"
-                          : "border-gray-300/50 bg-white/30 text-gray-800"
-                      } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
+                            ? "border-gray-700/50 bg-white/5 text-white"
+                            : "border-gray-300/50 bg-white/30 text-gray-800"
+                        } focus:border-blue-500 focus:outline-none transition-colors backdrop-blur-sm`}
                       value={formData.message}
                       onChange={handleInputChange}
                     ></textarea>
@@ -284,11 +275,10 @@ export default function Contact() {
               {/* Status Message */}
               {status && (
                 <div
-                  className={`mt-4 p-3 rounded-lg backdrop-blur-sm ${
-                    status.includes("success")
+                  className={`mt-4 p-3 rounded-lg backdrop-blur-sm ${status.includes("success")
                       ? "bg-green-500/10 text-green-400 border border-green-500/20"
                       : "bg-red-500/10 text-red-400 border border-red-500/20"
-                  }`}
+                    }`}
                 >
                   <p className="text-center">{status}</p>
                 </div>

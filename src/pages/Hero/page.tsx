@@ -44,8 +44,8 @@ export default function Hero() {
     <>
       <div
         className={`hero min-h-screen pt-16 relative ${theme === "dark"
-            ? "bg-[#090f1c] text-white"
-            : "bg-white text-gray-900"
+          ? "bg-[#090f1c] text-white"
+          : "bg-white text-gray-900"
           }`}
       >
         {/* Spotlight */}
@@ -61,8 +61,8 @@ export default function Hero() {
           <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)] opacity-25" />
         </div>
 
-        <div className="container mx-auto px-2 py-12 relative">
-          <div className="flex flex-col md:flex-row justify-between items-center min-h-[80vh]">
+        <div className="container mx-auto px-4 py-8 md:py-12 relative">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 min-h-[80vh]">
             {/* Left Section */}
             <div className="md:w-1/2 w-full">
               {/* Welcome Badge */}
@@ -93,7 +93,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold">
                 <SparklesText
                   text={config.information.helloText}
                   sparklesCount={10}
@@ -105,11 +105,11 @@ export default function Hero() {
               <div className="mt-8 inline-block">
                 <div
                   className={`py-3 px-6 rounded-md border ${theme === "dark"
-                      ? "border-gray-700 bg-gray-800/30"
-                      : "border-gray-200 bg-gray-100"
+                    ? "border-gray-700 bg-gray-800/30"
+                    : "border-gray-200 bg-gray-100"
                     }`}
                 >
-                  <span className="font-medium text-2xl">
+                  <span className="font-medium text-xl md:text-2xl">
                     <FlipWords
                       words={config.flipWords}
                       duration={3000}
@@ -120,10 +120,10 @@ export default function Hero() {
                 </div>
               </div>
 
-              <p className="mt-6 text-2xl">{config.information.title}</p>
+              <p className="mt-6 text-lg md:text-2xl">{config.information.title}</p>
 
               {/* Network Badges */}
-              <div className="flex gap-4 mb-3 py-3">
+              <div className="flex flex-wrap gap-2 mb-3 py-3">
                 {networks.map((network, index) => (
                   <div
                     key={index}
@@ -179,7 +179,7 @@ export default function Hero() {
             </div>
 
             {/* Right Section - Code Window */}
-            <div className="md:w-1/2 w-full rounded-lg overflow-hidden ">
+            <div className="hidden md:block md:w-1/2 w-full rounded-lg overflow-hidden">
               <div className="code-window bg-gray-900 rounded-lg  shadow-lg relative before:absolute before:w-[200%] before:h-[200%] before:top-[-50%] before:left-[-50%] before:animate-[spin_4s_linear_infinite] before:bg-[conic-gradient(from_0deg,transparent_0_45deg,#3b82f6_45deg_135deg,transparent_135deg_180deg,transparent_180deg_225deg,#3b82f6_225deg_315deg,transparent_315deg)] before:opacity-30">
                 {/* Window Header */}
                 <div className="bg-gray-800 px-4 py-2 flex items-center relative z-10">
