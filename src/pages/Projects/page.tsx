@@ -31,11 +31,10 @@ const ProjectShowcase = () => {
 
   return (
     <div
-      className={`pt-40 min-h-screen p-8 ${
-        isDarkMode
+      className={`pt-20 md:pt-40 min-h-screen p-4 md:p-8 ${isDarkMode
           ? "bg-gradient-to-b from-[#020617] via-[#0a0f1f] to-[#000D1A]/90 text-slate-100"
           : "bg-gradient-to-b from-[#f0f4f8] via-[#e2e8f0] to-[#cbd5e1] text-gray-900"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto space-y-12">
         {projects.map((project, index) => (
@@ -44,7 +43,7 @@ const ProjectShowcase = () => {
             className="flex flex-col md:flex-row items-center group rounded-lg p-[2px] bg-gradient-to-r from-cyan-500 via-purple-500 to-emerald-500 bg-[length:400%_400%] animate-gradient-xy hover:bg-[length:100%_100%] transition-all duration-700 shadow-lg"
           >
             {/* Image Section */}
-            <div className="md:w-1/2 overflow-hidden rounded-lg">
+            <div className="w-full md:w-1/2 overflow-hidden rounded-lg">
               <img
                 src={project.image}
                 alt={project.title}
@@ -54,11 +53,10 @@ const ProjectShowcase = () => {
 
             {/* Text Section */}
             <Card
-              className={`md:w-1/2 rounded-lg overflow-hidden shadow-md transition-transform duration-500 group-hover:scale-105 group-hover:shadow-2xl p-6 ${
-                isDarkMode
+              className={`md:w-1/2 rounded-lg overflow-hidden shadow-md transition-transform duration-500 group-hover:scale-105 group-hover:shadow-2xl p-6 ${isDarkMode
                   ? "bg-gradient-to-br from-slate-800 to-gray-900"
                   : "bg-gradient-to-br from-white to-gray-100"
-              }`}
+                }`}
             >
               <MacOsButtons />
 
@@ -69,9 +67,8 @@ const ProjectShowcase = () => {
                       Featured Project
                     </div>
                     <CardTitle
-                      className={`text-3xl font-bold ${
-                        isDarkMode ? "text-slate-100" : "text-gray-900"
-                      }`}
+                      className={`text-3xl font-bold ${isDarkMode ? "text-slate-100" : "text-gray-900"
+                        }`}
                     >
                       {project.title}
                     </CardTitle>
@@ -99,9 +96,8 @@ const ProjectShowcase = () => {
 
               <CardContent className="mt-4">
                 <p
-                  className={`mb-6 text-lg leading-relaxed ${
-                    isDarkMode ? "text-slate-300" : "text-gray-700"
-                  }`}
+                  className={`mb-6 text-lg leading-relaxed ${isDarkMode ? "text-slate-300" : "text-gray-700"
+                    }`}
                 >
                   {project.description}
                 </p>

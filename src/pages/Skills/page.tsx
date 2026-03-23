@@ -317,7 +317,7 @@ const SkillsSection = () => {
 
   return (
     <main
-      className={`lg:pt-0 flex flex-col items-center justify-center ${isDark ? "bg-[#090F1C] text-white" : "bg-gray-50 text-gray-900"
+      className={`pt-20 lg:pt-0 flex flex-col items-center justify-center ${isDark ? "bg-[#090F1C] text-white" : "bg-gray-50 text-gray-900"
         } min-h-screen flex items-center justify-center`}
     >
 
