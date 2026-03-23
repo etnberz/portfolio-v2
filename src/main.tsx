@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 import ThemeProvider from "./provider/page";
 import "./index.css";
+import "./i18n/index";
 import App from "./App.jsx";
 
 // Add a null check before creating root

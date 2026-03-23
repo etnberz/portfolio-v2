@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { FaDocker, FaLinux } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 import {
   SiPython,
   SiAmazonwebservices,
@@ -126,11 +127,12 @@ const SkillCard = ({
 const SkillsSection = () => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const { t } = useTranslation();
 
   const skillCategories: SkillCategory[] = [
     {
       icon: BrainCircuit,
-      title: "Machine Learning",
+      title: t("skills.categories.machineLearning"),
       color: "text-blue-400",
       skills: [
         {
@@ -165,7 +167,7 @@ const SkillsSection = () => {
     },
     {
       icon: Server,
-      title: "Data Science",
+      title: t("skills.categories.dataScience"),
       color: "text-green-400",
       skills: [
         {
@@ -204,7 +206,7 @@ const SkillsSection = () => {
     },
     {
       icon: Bot,
-      title: "Generative AI",
+      title: t("skills.categories.generativeAI"),
       color: "text-purple-400",
       skills: [
         { name: "Langchain", icon: <SiLangchain className="w-4 h-4 text-blakc-400" /> },
@@ -232,7 +234,7 @@ const SkillsSection = () => {
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
+      title: t("skills.categories.cloudDevOps"),
       color: "text-orange-400",
       skills: [
         { name: "AWS", icon: <SiAmazonwebservices className="w-4 h-4 text-white-400" /> },
@@ -256,7 +258,7 @@ const SkillsSection = () => {
     },
     {
       icon: Cpu,
-      title: "Tools & Technologies",
+      title: t("skills.categories.tools"),
       color: "text-pink-400",
       skills: [
         {
@@ -284,31 +286,31 @@ const SkillsSection = () => {
     },
     {
       icon: Sparkles,
-      title: "Soft Skills",
+      title: t("skills.categories.softSkills"),
       color: "text-yellow-400",
       skills: [
         {
-          name: "Curious",
+          name: t("skills.softSkills.curious"),
           icon: <Lightbulb className="w-4 h-4 text-yellow-400" />,
         },
         {
-          name: "Passionate",
+          name: t("skills.softSkills.passionate"),
           icon: <Heart className="w-4 h-4 text-red-400" />,
         },
         {
-          name: "Team Work",
+          name: t("skills.softSkills.teamWork"),
           icon: <RiTeamFill className="w-4 h-4 text-purple-400" />,
         },
         {
-          name: "Pedagogical",
+          name: t("skills.softSkills.pedagogical"),
           icon: <GraduationCap className="w-4 h-4 text-green-400" />,
         },
         {
-          name: "Creative",
+          name: t("skills.softSkills.creative"),
           icon: <Paintbrush className="w-4 h-4 text-orange-400" />,
         },
         {
-          name: "Smiling",
+          name: t("skills.softSkills.smiling"),
           icon: <Smile className="w-4 h-4 text-yellow-400" />,
         },
       ],

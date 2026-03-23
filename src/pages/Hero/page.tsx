@@ -13,6 +13,7 @@ import {
   SiLinkedin, SiMedium, SiGithub
 } from "react-icons/si";
 import { LuBriefcaseBusiness } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
 
 const networks = [
   {
@@ -39,6 +40,7 @@ const networks = [
 
 export default function Hero() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -85,7 +87,7 @@ export default function Hero() {
                             : "text-black hover:text-neutral-600")
                         }
                       >
-                        <span><a href="#about">{config.information.welcomeText}</a></span>
+                        <span><a href="#about">{t("hero.welcome")}</a></span>
                         <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                       </AnimatedShinyText>
                     </div>
@@ -95,10 +97,10 @@ export default function Hero() {
 
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold">
                 <SparklesText
-                  text={config.information.helloText}
+                  text={t("hero.hello")}
                   sparklesCount={10}
                 />
-                I'm{" "}
+                {t("hero.im")}{" "}
                 <span className="text-teal-400">{config.information.name}</span>
               </h1>
 
@@ -111,7 +113,7 @@ export default function Hero() {
                 >
                   <span className="font-medium text-xl md:text-2xl">
                     <FlipWords
-                      words={config.flipWords}
+                      words={t("hero.flipWords", { returnObjects: true }) as string[]}
                       duration={3000}
                       className={`font-medium ${theme === "dark" ? "text-gray-200" : "text-gray-800"
                         }`}
@@ -120,7 +122,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <p className="mt-6 text-lg md:text-2xl">{config.information.title}</p>
+              <p className="mt-6 text-lg md:text-2xl">{t("hero.title")}</p>
 
               {/* Network Badges */}
               <div className="flex flex-wrap gap-2 mb-3 py-3">
@@ -164,7 +166,7 @@ export default function Hero() {
                     href="#about"
                     className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
                   >
-                    <Button className="cursor-pointer">Learn More</Button>
+                    <Button className="cursor-pointer">{t("hero.learnMore")}</Button>
                   </a>
                 </div>
                 <div className="z-10 flex items-center justify-center">
@@ -172,13 +174,13 @@ export default function Hero() {
                     href="/cv_maxime_caitucoli.pdf"
                     className="bg-transparent text-blue-400  hover:bg-opacity-30 transition duration-300 cursor-pointer"
                   >
-                    <Button className="cursor-pointer">Get Resume</Button>
+                    <Button className="cursor-pointer">{t("hero.getResume")}</Button>
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Right Section - Code Window */}
+            {/* Right Section - Code Window (desktop only) */}
             <div className="hidden md:block md:w-1/2 w-full rounded-lg overflow-hidden">
               <div className="code-window bg-gray-900 rounded-lg  shadow-lg relative before:absolute before:w-[200%] before:h-[200%] before:top-[-50%] before:left-[-50%] before:animate-[spin_4s_linear_infinite] before:bg-[conic-gradient(from_0deg,transparent_0_45deg,#3b82f6_45deg_135deg,transparent_135deg_180deg,transparent_180deg_225deg,#3b82f6_225deg_315deg,transparent_315deg)] before:opacity-30">
                 {/* Window Header */}
